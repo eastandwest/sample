@@ -1,15 +1,11 @@
-// export function handler(event, context, callback) {
-//   console.log(event)
-//   callback(null, {
-//     statusCode: 200,
-//     body: JSON.stringify({msg: "Hello, World!"})
-//   })
-// }
+import uuid from 'uuid/v1'
+
 export async function handler(event) {
   console.log(event)
+  const id = uuid()
 
   return {
     statusCode: 200,
-    body: JSON.stringify({msg: "Hello, World!"})
+    body: JSON.stringify({msg: id})
   }
 }
